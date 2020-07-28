@@ -1,0 +1,90 @@
+// http://ionicframework.com/docs/theming/ion-loading.my-loading-class {
+ion-loading.transparent {
+  .ghost {
+    animation: float 3s ease-out infinite;
+
+  }
+
+  .fonts{
+    font-family: font7;
+    color: color($colors, flatbg3, base);
+    text-align: center;
+  }
+
+  .loading-wrapper {
+    background: transparent;
+    box-shadow: none;
+
+    .spinner-crescent circle {
+      stroke-width: 8px;
+    }
+
+    .spinner-dots {
+      stroke-width: 80px;
+      color: black;
+    }
+  }
+
+  .bot-loading-container{
+	    width: 100%;
+	    float: right;
+	    margin-right: -240px;
+	    margin-top: 50px;
+			animation: float 3.2s ease-out infinite;
+	    }
+
+		///////
+		.container {
+			margin-left: 32%;
+			margin-bottom: -10%;
+			position: relative;
+			z-index: 1;
+		}
+
+		@keyframes float {
+			50% {
+				 transform: translate(0, 20px);
+			}
+		}
+		.shadowFrame {
+			width: 130px;
+			margin-top: 15px;
+			margin-left: -2.1%;
+		}
+		.shadow {
+			animation: shrink 3s ease-out infinite;
+			transform-origin: center center;
+			ellipse {
+				transform-origin: center center;
+			}
+		}
+
+		@keyframes shrink {
+			0% {
+				width: 90%;
+				margin: 0 5%;
+			}
+			50% {
+				width: 60%;
+				margin: 0 18%;
+			}
+			100% {
+				width: 90%;
+				margin: 0 5%;
+			}
+		}
+}
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.

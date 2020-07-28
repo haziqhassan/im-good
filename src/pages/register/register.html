@@ -1,0 +1,27 @@
+<ion-content class="bgcolor">
+
+  <div class="bgcolor">
+    <h2 class="title" text-uppercase>New Forum</h2>
+  </div>
+
+<form [formGroup]="form" (ngSubmit)="saveEntry()">
+  <div class="divinput" padding>
+  <ion-list>
+    <ion-item class="top">
+      <ion-label floating>Topic</ion-label>
+      <ion-input type="text" formControlName="topic" value="" placeholder=""></ion-input>
+    </ion-item>
+
+    <ion-item class="bottom">
+      <ion-label floating>What's on your mind?</ion-label>
+      <ion-textarea formControlName="post" placeholder="" rows="6"></ion-textarea>
+    </ion-item>
+    <br>
+    <br>
+
+    <button ion-button class="btn" round [disabled]="!form.valid"> Post</button>
+  </ion-list>
+  </div>
+</form>
+
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-header>
+  	<ion-navbar class="bgtitle">
+    	  <ion-title text-wrap text-uppercase class="title">
+          Room
+   	 </ion-title>
+  	</ion-navbar>
+</ion-header>
+
+<ion-content class="bggg">
+  <ion-grid class="padtop">
+    <ion-row *ngFor="let message of messages">
+      <ion-col col-9 *ngIf="message.from !== nickname" class="message" [ngClass]="{'my_message': message.from === nickname, 'other_message': message.from !== nickname}">
+        <span [ngClass]="{'user_name': message.from === nickname, 'user_name1': message.from !== nickname}">{{ message.from }}:</span><br>
+        <span>{{ message.text }}</span>
+        <div class="time">{{message.created | date:'hh:mm'}}</div>
+      </ion-col>
+
+      <ion-col offset-3 col-9 *ngIf="message.from === nickname" class="message" [ngClass]="{'my_message': message.from === nickname, 'other_message': message.from !== nickname}">
+        <span [ngClass]="{'user_name': message.from === nickname, 'user_name1': message.from !== nickname}">{{ message.from }}:</span><br>
+        <span>{{ message.text }}</span>
+        <div class="time">{{message.created | date:'hh:mm'}}</div>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+
+<ion-footer>
+        <ion-item>
+          <ion-input type="text" placeholder="What's on your mind sunshine?" [(ngModel)]="message"></ion-input>
+          <button ion-button clear (click)="sendMessage()" [disabled]="message === ''" item-end>
+            <ion-icon class="footer-btn" name="send"></ion-icon>
+          </button>
+      </ion-item>
+</ion-footer>

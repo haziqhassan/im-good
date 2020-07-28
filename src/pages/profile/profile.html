@@ -1,0 +1,55 @@
+
+
+<ion-content>
+
+  <div class="bgcolor">
+    <h2 class="title" text-uppercase>Profil {{userDetails.name}}</h2>
+  </div>
+
+  <form [formGroup]="form" (ngSubmit)="editProfile()">
+  <div class="divinput">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>No. Staf</ion-label>
+        <ion-input type="text" [(ngModel)]="nostaf" formControlName="nostafd" readonly></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Nama Penuh</ion-label>
+        <ion-input type="text" [(ngModel)]="name" formControlName="named" readonly></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating >No. Telefon</ion-label>
+        <ion-input type="text" [(ngModel)]="notelefon" rows="4" formControlName="notelefond"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating >Emel</ion-label>
+        <ion-input type="text" [(ngModel)]="email" rows="4" formControlName="emaild"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating >Nama Pendaftar Amil</ion-label>
+        <ion-input type="text" [(ngModel)]="pendaftar" formControlName="pendaftard" readonly></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating >Kata Laluan Lama</ion-label>
+        <ion-input type="text" rows="4" formControlName="passwordd1"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating >Kata Laluan Baru</ion-label>
+        <ion-input type="text" rows="4" formControlName="passwordd"></ion-input>
+      </ion-item>
+      <br>
+      <div padding>
+        <button ion-button class="btn" round [disabled]="!form.valid"> KEMASKINI PROFIL</button>
+      </div>
+    </ion-list>
+
+  </div>
+  </form>
+
+</ion-content>

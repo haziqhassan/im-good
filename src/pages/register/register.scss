@@ -1,0 +1,64 @@
+page-register {
+
+  ion-label{
+    font-family: font4;
+  }
+
+  .bgcolor{
+    background-color: #778beb;
+    padding-top: 20px;
+
+  }
+
+  .title{
+    font-family: font7;
+    color: color($colors, dark, base);
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+
+    .divinput{
+      padding-top: 10px;
+      -moz-border-radius: 60px;
+      -webkit-border-radius: 80px;
+      border-radius: 20px !important;
+    }
+
+    .top{
+      border-top-left-radius: 20px !important;
+      border-top-right-radius: 20px !important;
+    }
+
+    .bottom{
+      border-bottom-left-radius: 20px !important;
+      border-bottom-right-radius: 20px !important;
+    }
+
+  .toast-container{
+  		.toast-wrapper {
+  		background-color: color($colors, flaty3, base);
+  		opacity: 0.8;
+  		border-radius: 30px;
+  		border-bottom-left-radius: 0px;
+  		border-bottom-right-radius: 0px;
+  		padding-bottom: 6px;
+  		text-align: center;
+  	}
+  	.toast-message {
+  		font-family: font5;
+  		font-size: 18px;
+  		color: color($colors, dark);
+  	}
+  }
+
+  .btn{
+		font-family: font5;
+		//font-size: 16px;
+		//min-width: 80%;
+		min-width: 100%;
+		background-color: color($colors, flaty3, base);
+		color: #222;
+		//max-width: 300px;
+	}
+}

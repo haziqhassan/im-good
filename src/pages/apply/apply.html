@@ -1,0 +1,87 @@
+<ion-content class="bgg">
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+  <ion-refresher-content
+    refreshingSpinner="dots">
+  </ion-refresher-content>
+</ion-refresher>
+
+  <h2 text-uppercase class="come"> My Application</h2>
+
+<div>
+  <ion-searchbar (ionInput)="getItems($event)" class="search"></ion-searchbar>
+</div>
+
+    <ion-list class="lists">
+      <div *ngIf="dataSet != 0">
+          <ion-card *ngFor="let item of dataSet" class="ion-item-border">
+
+            <ion-item class="cardheader">
+                  <h2 class="people3" text-capitalize>{{ item.topic }}</h2>
+                  <p class="people2" text-wrap>With {{ item.name }} as
+                    <span *ngIf="item.position == 'C'">Counselor</span>
+                    <span *ngIf="item.position == 'AC'">Assitant Counselor</span>
+                  </p>
+            </ion-item>
+
+            <ion-card-content>
+              <ion-row>
+                <ion-col>
+                  <ion-card class="card1">
+                    <h2 class="people">Time</h2>
+                    <p class="people2">{{ item.time }}</p>
+                  </ion-card>
+                </ion-col>
+                <ion-col>
+                  <ion-card class="card1">
+                    <h2 class="people">Date</h2>
+                    <p class="people2">{{ item.date }}</p>
+                  </ion-card>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <ion-card class="card1">
+                    <h2 class="people">Category</h2>
+                    <p class="people2">{{ item.category }}</p>
+                  </ion-card>
+                </ion-col>
+                <ion-col>
+                  <ion-card class="card1">
+                    <h2 class="people">Service</h2>
+                    <p class="people2">{{ item.service }}</p>
+                  </ion-card>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+              <span class="pads" *ngIf="item.academic == 1"><img class="imgs" class="btnnew" src="assets/imgs/book2.png"/></span>
+              <span class="pads" *ngIf="item.career == 1"><img class="imgs" class="btnnew" src="assets/imgs/briefcase3.png"/></span>
+              <span class="pads" *ngIf="item.psychosocial == 1"><img class="imgs" class="btnnew" src="assets/imgs/chat.png"/></span>
+              <span class="pads" *ngIf="item.financial == 1"><img class="imgs" class="btnnew" src="assets/imgs/cash.png"/></span>
+              <span class="pads" *ngIf="item.family == 1"><img class="imgs" class="btnnew" src="assets/imgs/people.png"/></span>
+              <span class="pads" *ngIf="item.others == 1"><img class="imgs" class="btnnew" src="assets/imgs/others.png"/></span>
+              </ion-row>
+                <ion-item>
+                  <p class="people2">Status:
+                    <span *ngIf="item.status == 'Approved'" style="color: #32db64;">Approved</span>
+                    <span *ngIf="item.status == 'Pending'" style="color: #FFC312;">Pending</span>
+                    <span *ngIf="item.status == 'Rejected'" style="color: #222;">Rejected</span>
+                  </p>
+                  <p class="people2">Apply on: {{ item.dateBook }}</p>
+                  <ion-icon *ngIf="item.status != 'Approved'" color="grid2" name="trash" (click)="deleteMeeting({item : item.idMeet})" item-end small></ion-icon>
+                </ion-item>
+            </ion-card-content>
+
+          </ion-card>
+      </div>
+      <div *ngIf="dataSet == 0">
+        <ion-card class="ion-item-border">
+
+          <ion-item class="cardheader">
+                <p class="people" style="text-align: center;">There's no meeting, apply now!</p>
+          </ion-item>
+
+        </ion-card>
+      </div>
+    </ion-list>
+
+</ion-content>

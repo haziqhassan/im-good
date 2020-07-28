@@ -1,0 +1,109 @@
+page-apply {
+
+      .btnnew{
+          border-radius: 50% !important;
+          width: 40px;
+        }
+
+        .pads{
+          padding-right: 8px;
+        }
+
+      .cardheader{
+        //background-color: #43ff9f;
+      }
+
+      .card1{
+        //background-color: color($colors, test, base);
+        background-color: #43ff9f;
+        padding: 10px;
+        margin-top: -5px;
+        border-radius: 10px !important;
+        height: 100%;
+      }
+
+      .span{
+        padding-right: 15px;
+      }
+
+      .bgg{
+        background-color: color($colors, test, base);
+      }
+
+      .come{
+        font-family: font7;
+        color: color($colors, dark, base);
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 30px;
+      }
+
+
+      .title{
+        font-family: font7;
+      }
+
+      ion-searchbar{
+       .searchbar-input-container{
+           .searchbar-input{
+               border-radius: 20px;
+           }
+
+       }
+      }
+
+      ion-item.item{
+        margin-bottom: 7px;
+      }
+
+        .lists{
+          padding-top: 20px;
+          padding-left: 10px;
+          padding-right: 10px;
+          padding-bottom: 5px;
+
+        }
+
+        .ion-item-border {
+          border-radius: 20px !important;
+        }
+
+        .people{
+          font-family: font4;
+          font-weight: bold;
+        }
+
+        .people2{
+          font-family: font4;
+          color: color($colors, dark, base);
+        }
+
+        .people3{
+          font-family: font4;
+          font-size: 20px !important;
+          //color: color($colors, dark, base);
+          color: #778beb;
+          font-weight: bold;
+        }
+
+        .meet1{
+      		background-color: color($colors, flatbg3, base);
+      		color: color($colors, dark, base);
+      		text-align: center;
+      		font-family: font7;
+      		padding-top: 10px;
+      		padding-bottom: 10px;
+      	}
+
+      	.meet2{
+      		background-color: color($colors, flatbg3, base);
+          color: #778beb;
+      		//color: color($colors, dark, base);
+      		text-align: center;
+      		font-family: font7;
+      		padding-top: 10px;
+      		padding-bottom: 10px;
+      	}
+
+}

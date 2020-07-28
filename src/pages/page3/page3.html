@@ -1,0 +1,21 @@
+<ion-content padding class="bgg">
+
+  <h2 text-uppercase class="come"> Choose your counselor</h2>
+
+  <div>
+    <ion-searchbar (ionInput)="getItems($event)" class="search"></ion-searchbar>
+  </div>
+
+      <ion-list class="lists">
+
+            <ion-card *ngFor="let item of dataSet" class="ion-item-border" (click)="goMeeting( {record : item} )">
+              <ion-item>
+                    <h2 class="people" text-wrap>{{ item.name }}</h2>
+                    <p class="people2" *ngIf="item.position == 'C'" text-wrap>Counselor</p>
+                    <p class="people2" *ngIf="item.position != 'C'" text-wrap>Assistant Counselor</p>
+              </ion-item>
+            </ion-card>
+
+      </ion-list>
+
+  </ion-content>

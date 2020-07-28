@@ -1,0 +1,81 @@
+page-consultant2 {
+
+    .bgtitle{
+      background-color: color($colors, flatbg3, base) !important;
+      height: 1%;
+      //position: -webkit-sticky;
+      //position: sticky;
+      position: fixed;
+      //margin-left: 32%;
+      //top: 10%;
+      //top: 5%;
+      width: 100%;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      //border-radius: 30px;
+      //z-index: 1;
+    }
+
+    .title{
+      font-family: font7;
+      font-size: small !important;
+      color: color($colors, dark, base);
+      text-align: center;
+      //margin-left: 30%;
+      //margin-top: 60px;
+      //z-index: 1;
+    }
+
+    .bggg{
+      background-color: color($colors, flatbg2, base) !important;
+    }
+
+    .padtop{
+      margin-top: 15%;
+      margin-bottom: 15%;
+    }
+
+    .user_name {
+        color: #000;
+        font-weight: bold;
+    }
+
+    .user_name1 {
+        color: color($colors, flatbg2, base) !important;
+        font-weight: bold;
+    }
+
+    .message {
+        padding: 10px !important;
+        transition: all 250ms ease-in-out !important;
+        border-radius: 20px !important;
+        margin-bottom: 15px !important;
+    }
+    .my_message {
+        background: #dcdcdc !important;
+        color: #000 !important;
+    }
+    .other_message {
+        background: #4b7bec !important;
+        color: color($colors, flatbg2, base) !important;
+    }
+    .time {
+        color: #afafaf;
+        float: right;
+        font-size: small;
+    }
+
+    input,
+    textarea,
+    .item-input,
+    .item-input-wrapper {
+      background-color: color($colors, flatbg3, base) !important;
+    }
+
+    .footer-btn {
+      font-size: x-large;
+      color: tomato;
+      }
+
+
+}

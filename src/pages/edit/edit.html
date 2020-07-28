@@ -1,0 +1,85 @@
+
+<ion-content class="bgcolor">
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+  <ion-refresher-content
+    refreshingSpinner="dots">
+  </ion-refresher-content>
+</ion-refresher>
+
+  <div class="divinput2">
+    <ion-list no-lines>
+      <ion-item class="top" no-lines>
+        <ion-label floating>
+            Posted by
+            <span *ngIf="this.forumPass.user_id == this.userPostData.user_id">you</span>
+            <span *ngIf="this.forumPass.user_id != this.userPostData.user_id">{{ this.forumPass.author }}</span>
+        </ion-label>
+
+        <ion-input type="text" class="people" [ngModel]="this.forumPass.topic" readonly no-lines></ion-input>
+      </ion-item>
+
+      <ion-item no-lines>
+        <ion-textarea type="text" rows="8" [ngModel]="this.forumPass.post" readonly></ion-textarea>
+      </ion-item>
+
+      <ion-item no-lines class="bottom">
+      <ion-row class="padd">
+        <ion-col>
+          <!--<button ion-button icon-start clear small color="primary" (click)="upvote()">
+            <ion-icon name="arrow-round-up"></ion-icon>
+            {{ this.forumPass.upvote }}
+          </button>
+          <span class="span"></span>
+          <button ion-button icon-start clear small color="primary" (click)="downvote()">
+            <ion-icon name="arrow-round-down"></ion-icon>
+            {{ this.forumPass.downvote }}
+          </button>-->
+          <button ion-button icon-start clear small color="test2" item-start>
+            <ion-icon name="time"></ion-icon>
+            {{ this.forumPass.time }}
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-start clear small color="test2" item-end>
+            <ion-icon name="calendar"></ion-icon>
+            <!--<div>{{ this.forumPass.allcomment }}</div>-->
+            {{ this.forumPass.date }}
+          </button>
+        </ion-col>
+      </ion-row>
+      </ion-item>
+    </ion-list>
+  </div>
+  <br>
+
+  <div class="divinput">
+    <ion-list>
+      <ion-item class="top1" no-lines>
+      </ion-item>
+      <div *ngIf="dataSet != 0">
+          <ion-item *ngFor="let otem of dataSet" class="items">
+            <ion-icon *ngIf="otem.user_id == this.userPostData.user_id" color="grid2" name="trash" (click)="deleteComment({otem : otem.id})" item-end small></ion-icon>
+            <ion-icon *ngIf="otem.user_id != this.userPostData.user_id" name="flag" color="danger" (click)="flagcomment({otem : otem.id})" item-end small> {{ otem.flag }}</ion-icon>
+            <ion-icon *ngIf="otem.user_id == this.userPostData.user_id" name="flag" color="silver" item-end small> {{ otem.flag }}</ion-icon>
+
+            <h2><span *ngIf="otem.user_id == this.userPostData.user_id">you</span>
+            <span *ngIf="otem.user_id != this.userPostData.user_id">{{otem.user}}</span> <ion-note style="font-size: 14px;">{{otem.time}}</ion-note></h2>
+            <p text-wrap>{{otem.text}}</p>
+
+          </ion-item>
+      </div>
+      <div *ngIf="dataSet == 0">
+        <ion-item class="items" style="text-align: center;">
+          <h2>Be the first to comment!</h2>
+        </ion-item>
+      </div>
+
+      <ion-item class="bottom1" no-lines>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <ion-fab right bottom>
+    <button ion-fab color="flaty3" (click)="openModal()"><ion-icon name="text"></ion-icon></button>
+  </ion-fab>
+</ion-content>

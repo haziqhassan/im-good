@@ -1,0 +1,72 @@
+<ion-content class="bgg">
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+  <ion-refresher-content
+    refreshingSpinner="dots">
+  </ion-refresher-content>
+</ion-refresher>
+
+  <h2 text-uppercase class="come"> All Topics</h2>
+
+<div>
+  <ion-searchbar (ionInput)="getItems($event)" class="search"></ion-searchbar>
+</div>
+
+    <ion-list class="lists">
+
+          <ion-card tappable *ngFor="let item of dataSet" class="ion-item-border" (click)="goedit( {record : item})">
+
+            <ion-item>
+                  <ion-icon *ngIf="item.user_id == this.userPostData.user_id" color="grid2" name="trash" (click)="deleteForum({item : item.id}, $event.stopPropagation())" item-end small></ion-icon>
+                  <h2 class="people">{{ item.topic }}</h2>
+                  <p class="people2">Posted by
+                    <span *ngIf="item.user_id == this.userPostData.user_id">you</span>
+                    <span *ngIf="item.user_id != this.userPostData.user_id">{{ item.author }}</span>
+                  </p>
+            </ion-item>
+
+            <ion-card-content>
+              <p class="people2">{{ item.post }}</p>
+            </ion-card-content>
+            <ion-row>
+              <ion-col>
+                <button ion-button icon-start clear small color="test2">
+                  <ion-icon name="time"></ion-icon>
+                  {{ item.time }}
+                </button>
+              </ion-col>
+              <ion-col>
+                <button ion-button icon-start clear small color="test2">
+                  <ion-icon name="text"></ion-icon>
+                  <div *ngIf="item.allcomment < 1">0</div>
+                  <div *ngIf="item.allcomment >= 1">{{ item.allcomment }}</div>
+                </button>
+              </ion-col>
+              <ion-col>
+                <button ion-button icon-start clear small color="test2">
+                    <ion-icon name="calendar"></ion-icon>
+                    {{ item.date }}
+                </button>
+              </ion-col>
+              <ion-col *ngIf="item.user_id != this.userPostData.user_id" align-self-center text-center (click)="flagForum({item : item.id}, $event.stopPropagation())">
+                <ion-note color="danger">
+                  <ion-icon name="flag" clear small></ion-icon>
+                  {{ item.flag }}
+                </ion-note>
+              </ion-col>
+              <ion-col *ngIf="item.user_id == this.userPostData.user_id" align-self-center text-center>
+                <ion-note color="silver">
+                  <ion-icon name="flag" clear small></ion-icon>
+                  {{ item.flag }}
+                </ion-note>
+              </ion-col>
+            </ion-row>
+
+          </ion-card>
+
+    </ion-list>
+    <div class="zzz"></div>
+    <ion-fab right bottom>
+      <button ion-fab color="flaty3" (click)="gonext()"><ion-icon name="paper"></ion-icon></button>
+    </ion-fab>
+
+</ion-content>

@@ -1,0 +1,68 @@
+	page-profile {
+		ion-label{
+	    font-family: font4;
+	  }
+
+	  .bgcolor{
+	    background-color: color($colors, flaty3, base);
+	    //padding-top: 20px;
+	    padding: 27px;
+	  }
+
+	  .title{
+	    font-family: font7;
+	    color: color($colors, dark, base);
+	    text-align: center;
+	    padding-bottom: 10px;
+	  }
+
+	  .divinput{
+	    padding-top: 20px;
+	  }
+
+	  .item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
+	  .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner
+	  {
+	      border-bottom-color: transparent;
+	      box-shadow: inset 0 -1px 0 0 #dedede;
+	  }
+
+	  .image{
+	    border: 6px solid;
+	    border-color: color($colors, white, base);
+	    height: 25vh;
+	    width: auto;
+	    margin: auto;
+	    display: block;
+	    align-items: center;
+	    border-radius: 70px;
+	  }
+
+	  .toast-container{
+	  		.toast-wrapper {
+	  		background-color: color($colors, flaty3, base);
+	  		opacity: 0.8;
+	  		border-radius: 30px;
+	  		border-bottom-left-radius: 0px;
+	  		border-bottom-right-radius: 0px;
+	  		padding-bottom: 6px;
+	  		text-align: center;
+	  	}
+	  	.toast-message {
+	  		font-family: font5;
+	  		font-size: 18px;
+	  		color: color($colors, dark);
+	  	}
+	  }
+
+		.btn{
+			font-family: font5;
+			//font-size: 16px;
+			//min-width: 80%;
+			min-width: 100%;
+			background-color: color($colors, flaty3, base);
+			color: #222;
+			//max-width: 300px;
+		}
+
+	}

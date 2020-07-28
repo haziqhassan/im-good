@@ -1,0 +1,22 @@
+<ion-header class="bg">
+  <ion-toolbar class="head">
+    <ion-title>
+      Post comment
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <ion-icon name="close-circle" color="dark"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content">
+  <form [formGroup]="form" (ngSubmit)="postComment()">
+    <ion-item class="item">
+      <ion-textarea rows="3" formControlName="text" placeholder="Your thought might hurt others, mind your words :)"></ion-textarea>
+    </ion-item>
+    <button ion-button class="yes" [disabled]="!form.valid" full padding> Post </button>
+  </form>
+  <button ion-button class="cancel" (click)="dismiss()" full> Cancel </button>
+</ion-content>

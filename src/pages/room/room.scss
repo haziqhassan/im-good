@@ -1,0 +1,56 @@
+page-room {
+
+  .span{
+    padding-right: 15px;
+  }
+
+  .bgg{
+    background-color: #2bcbba;
+  }
+
+  .come{
+    font-family: font7;
+    color: color($colors, dark, base);
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+  }
+
+
+  .title{
+    font-family: font7;
+  }
+
+  ion-searchbar{
+   .searchbar-input-container{
+       .searchbar-input{
+           border-radius: 20px;
+       }
+
+   }
+  }
+
+  ion-item.item{
+    margin-bottom: 7px;
+  }
+
+    .lists{
+      padding-top: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 5px;
+
+    }
+
+    .ion-item-border {
+      border-radius: 20px !important;
+    }
+
+    .people{
+      font-family: font4;
+
+    }
+
+
+}

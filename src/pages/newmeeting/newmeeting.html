@@ -1,0 +1,114 @@
+<ion-content class="bgcolor">
+
+  <div class="bgcolor">
+    <h2 class="title" text-uppercase>New Meeting</h2>
+    <h2 class="title2" text-uppercase>with {{ this.counselorData.name }}</h2>
+
+  </div>
+<form [formGroup]="form" (ngSubmit)="postMeeting()">
+  <div class="divinput" padding>
+  <ion-list>
+    <ion-item class="top">
+      <ion-label floating>Topic</ion-label>
+      <ion-input type="text" formControlName="topic"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Category</ion-label>
+      <!--<ion-select [(ngModel)]="notifications" interface="action-sheet">-->
+      <ion-select formControlName="category" interface="action-sheet">
+        <ion-option value="Individual">Individual</ion-option>
+        <ion-option value="Group">Group</ion-option>
+        <!--<ion-option value="mute_year" (ionSelect)="notificationSelect($event)">Mute for a year</ion-option>-->
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Service Type</ion-label>
+      <!--<ion-select [(ngModel)]="notifications" interface="action-sheet">-->
+      <ion-select formControlName="service" interface="action-sheet">
+        <ion-option value="Guidance">Guidance</ion-option>
+        <ion-option value="Counselling">Counselling</ion-option>
+        <!--<ion-option value="mute_year" (ionSelect)="notificationSelect($event)">Mute for a year</ion-option>-->
+      </ion-select>
+    </ion-item>
+
+    <ion-item no-lines>
+      <ion-label color="tomato">Problem Type</ion-label>
+    </ion-item>
+
+    <ion-item no-lines>
+        <ion-label><ion-icon name="bookmarks"></ion-icon> Academic</ion-label>
+        <ion-checkbox color="tomato" value="1" formControlName="academic"></ion-checkbox>
+    </ion-item>
+
+    <ion-item no-lines>
+        <ion-label><ion-icon name="briefcase"></ion-icon> Career</ion-label>
+        <ion-checkbox color="tomato" value="1" formControlName="career"></ion-checkbox>
+    </ion-item>
+
+    <ion-item no-lines>
+        <ion-label><ion-icon name="chatboxes"></ion-icon> Psychosocial</ion-label>
+        <ion-checkbox color="tomato" value="1" formControlName="psychosocial"></ion-checkbox>
+    </ion-item>
+
+    <ion-item no-lines>
+        <ion-label><ion-icon name="cash"></ion-icon> Financial</ion-label>
+        <ion-checkbox color="tomato" value="1" formControlName="financial"></ion-checkbox>
+    </ion-item>
+
+    <ion-item no-lines>
+        <ion-label><ion-icon name="people"></ion-icon> Family</ion-label>
+        <ion-checkbox color="tomato" value="1" formControlName="family"></ion-checkbox>
+    </ion-item>
+
+    <ion-item no-lines>
+        <ion-label><ion-icon name="create"></ion-icon> Others</ion-label>
+        <ion-checkbox color="tomato" value="1" formControlName="others"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Date</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" [min]="minDate" [max]="maxDate" formControlName="date"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Time</ion-label>
+      <ion-select formControlName="time" interface="action-sheet">
+        <ion-option value="9:00 am to 10:50 am">9:00 am to 10:50 am</ion-option>
+        <ion-option value="11:00 am to 12:50 pm">11:00 am to 12:50 pm</ion-option>
+        <ion-option value="2:30 pm to 4:30 pm">2:30 pm to 4:30 pm</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <!--<ion-item no-lines>
+      <ion-label color="tomato">Time</ion-label>
+    </ion-item>
+
+    <ion-item no-lines>
+        <ion-label>9:00 am to 10:50 am</ion-label>
+        <ion-checkbox color="tomato" value="1" [(ngModel)]="9to5" formControlName="9to5"></ion-checkbox>
+    </ion-item>
+
+    <ion-item no-lines>
+        <ion-label>11:00 am to 12:50 pm</ion-label>
+        <ion-checkbox color="tomato" value="1" [(ngModel)]="11to12" formControlName="11to12"></ion-checkbox>
+    </ion-item>
+
+    <ion-item no-lines>
+        <ion-label>2:30 pm to 4:30 pm</ion-label>
+        <ion-checkbox color="tomato" value="1" [(ngModel)]="2to4" formControlName="2to4"></ion-checkbox>
+    </ion-item>-->
+
+    <ion-item class="bottom">
+        <ion-label text-wrap>I have read and understood all the <button type="button" ion-button class="btn1" color="primary" (click)="openModal()" clear no-padding small>counseling terms here</button> and got the opportunity to ask questions and agree to begin counseling session.</ion-label>
+    </ion-item>
+    <br>
+    <br>
+
+    <button ion-button class="btn" round [disabled]="!form.valid">Submit</button>
+  </ion-list>
+  </div>
+</form>
+
+</ion-content>

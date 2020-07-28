@@ -1,0 +1,180 @@
+page-signup {
+
+  .p{
+    color: color($colors, flatbg1, base);
+  }
+
+  .background{
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;
+    background-color: #778beb;
+    //background: linear-gradient(10deg,#686c6f,#fff200);
+
+  }
+
+  .img{
+    padding-bottom: 20px;
+  }
+
+  .padd{
+    padding-top: -20px;
+  }
+
+  ion-card.card{
+    //background: rgba(232, 230, 230,0.6px);
+    //background-color: color($colors, flatbg2, base);
+    background-color: #778beb;
+    border-radius: 10px;
+  }
+
+
+  .y{
+    //color: #222;
+    color: #778beb;
+    font-size: 30px;
+    font-family: font7;
+    padding-top: 10px;
+
+  }
+
+  .z{
+    //color: #222;
+    color: black;
+    font-size: 20px;
+    font-family: font7;
+    padding-bottom: 20px;
+
+  }
+
+  ion-img{
+    background: rgba(232, 230, 230,0px);
+    border-radius: 10px;
+  }
+
+  .btn{
+    font-family: font5;
+    //font-size: 16px;
+    //min-width: 80%;
+    min-width: 100%;
+    background-color: #FFC312;
+    color: #222;
+
+    //max-width: 300px;
+
+  }
+
+  #rounded {
+        //min-width: 70%;
+        max-width: 100%;
+        max-height: 100px;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 80px;
+        //border-color: color($colors, flaty3, base);
+        border-radius: 50px;
+        margin-bottom: 10px;
+
+
+  }
+
+  #container {
+        width: 100%;
+        margin-left:auto;
+        margin-right: auto;
+  }
+
+  .item-inner {
+      border-bottom-color: transparent !important;
+      box-shadow: none !important;
+      font-family: font6;
+      //font-size: 20px;
+      background-color: color($colors, flatbg1, base);
+      //-webkit-tap-highlight-color: red;
+
+      ::placeholder {
+        //font-size: 20px; //sets placeholder font size
+        color: color($colors, dark);
+        background-color: color($colors, flatbg1, base);
+      }
+  }
+
+  .bot-loading-container{
+    width: 100%;
+    float: right;
+    margin-right: -230px;
+    margin-top: 50px;
+    animation: float 3.2s ease-out infinite;
+    }
+
+  ///////
+  .container2 {
+    margin-left: 32%;
+    margin-bottom: -10%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .ghost {
+		animation: float 3s ease-out infinite;
+		width: 120px;
+		height: 120px;
+		max-height: 90%;
+	  max-width: 90%;
+	  position: absolute;
+	  top: 5%;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  margin: auto;
+		margin-top: -3%;
+		z-index: 1;
+		@media screen and (orientation: portrait) {
+		  img.ri { max-width: 90%; }
+		}
+
+		@media screen and (orientation: landscape) {
+		  img.ri { max-height: 90%; }
+		}
+
+	}
+
+	@keyframes float {
+		50% {
+			 transform: translate(0, 20px);
+		}
+	}
+	.shadowFrame {
+		width: 130px;
+		position: absolute;
+	  top: 25%;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  margin: auto;
+		z-index: 1;
+		//margin-left: -2.1%;
+	}
+	.shadow {
+		animation: shrink 3s ease-out infinite;
+		transform-origin: center center;
+		ellipse {
+			transform-origin: center center;
+		}
+	}
+
+	@keyframes shrink {
+		0% {
+			width: 90%;
+			margin: 0 5%;
+		}
+		50% {
+			width: 60%;
+			margin: 0 18%;
+		}
+		100% {
+			width: 90%;
+			margin: 0 5%;
+		}
+	}
+
+}

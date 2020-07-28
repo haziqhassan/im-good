@@ -1,0 +1,62 @@
+page-modal {
+
+    position: absolute !important;
+    width: 75% !important;
+    height: 40% !important;
+    top: 20% !important;
+    left: 13.5% !important;
+    border-radius: 20px !important;
+
+    .head{
+  		text-align: center;
+  		font-family: font5;
+  		font-size: 18px;
+      //bg color kat variable.scss
+  	}
+
+    color: white;
+
+  	.content{
+  		background-color: color($colors, flatbg3, base) !important;
+  	}
+
+    .item{
+      background-color: color($colors, flatbg3, base) !important;
+    }
+
+  	/*.alert-input{
+  		color:  color($colors, dark, base) !important;
+  		line-height: 30px;
+  		rows: 6;
+  		overflow-wrap: break-word;
+  	}*/
+
+  	.cancel{
+  		color:  color($colors, dark, base) !important;
+      background-color: transparent;
+      box-shadow: none;
+  	}
+
+  	.yes{
+  		background-color: color($colors, flaty3, base) !important;
+  		color:  color($colors, dark, base) !important;
+  		border-radius: 20px !important;
+  		padding-left: 20px;
+  	}
+
+    /*.alert-message {
+        color:  color($colors, dark, base) !important;
+  			text-align: left;
+  			font-family: font5;
+  			font-size: 14px;
+  			padding-top: 20px;
+    }
+
+
+
+  	.modal-input{
+  		border-bottom: none!important;
+  	    caret-color: tomato;
+  	}*/
+
+}
